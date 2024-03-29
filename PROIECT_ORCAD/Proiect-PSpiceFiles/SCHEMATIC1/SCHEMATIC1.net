@@ -1,0 +1,44 @@
+* source PROIECT
+Q_Q1         N00177 N00075 0 Q2N2222
+Q_Q2         N00075 N00075 0 Q2N2222
+R_R3         N00075 VCC R_R3 38.8k TC=0,0 
+.model        R_R3 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_Rsenzor         N00177 VCC  {r} TC=0,0 
+R_R5         N00390 N00477 R_R5 1k TC=0,0 
+.model        R_R5 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R6         0 N00477 R_R6 1.78k TC=0,0 
+.model        R_R6 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R7         N00618 N00681 R_R7 1.78k TC=0,0 
+.model        R_R7 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R8         REF1 N00618 R_R8 1k TC=0,0 
+.model        R_R8 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R9         REF2 N00786 R_R9 1k TC=0,0 
+.model        R_R9 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R10         N00786 OUT R_R10 2.84k TC=0,0 
+.model        R_R10 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R11         OUT N01788 R_R11 816 TC=0,0 
+.model        R_R11 RES R=1 DEV=0.5% TC1=0 TC2=0
+Q_Q3         N01792 N01788 0 Q2N2222
+R_R12         N02007 OUT R_R12 768 TC=0,0 
+.model        R_R12 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_RL         N01792 VCC R_RL 464 TC=0,0 
+.model        R_RL RES R=1 DEV=0.5% TC1=0 TC2=0
+V_V1         VCC 0 17V
+V_V2         -VCC 0 -17V
+R_R14         N02701 VCC R_R14 1k TC=0,0 
+.model        R_R14 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R15         0 N02701 R_R15 156 TC=0,0 
+.model        R_R15 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R16         N03121 VCC R_R16 1.01k TC=0,0 
+.model        R_R16 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R17         0 N03121 R_R17 1k TC=0,0 
+.model        R_R17 RES R=1 DEV=0.5% TC1=0 TC2=0
+D_Dportocala         N02007 0 Dportocala 
+X_U4A         N00786 N00681 VCC -VCC OUT LM358
+X_U4B         N00477 N00618 VCC -VCC N00681 LM358
+X_U5A         N00177 N00390 VCC -VCC N00390 LM358
+X_U5B         N03121 REF2 VCC -VCC REF2 LM358
+X_U6A         N02701 REF1 VCC -VCC REF1 LM358
+D_Dportocala1         N12559 0 Dportocala 
+V_V3         N12559 0 4V
+.PARAM  r=15k

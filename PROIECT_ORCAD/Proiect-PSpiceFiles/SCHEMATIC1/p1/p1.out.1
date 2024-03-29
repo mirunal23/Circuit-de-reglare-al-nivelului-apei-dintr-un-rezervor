@@ -1,0 +1,67 @@
+
+**** 05/17/23 15:16:59 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-p1"  [ C:\Miruna\PROIECT_ORCAD\proiect-pspicefiles\schematic1\p1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "p1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../dportocala.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V3 0 10 0.1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECT
+Q_Q1         N00177 N00075 0 Q2N2222
+Q_Q2         N00075 N00075 0 Q2N2222
+R_R3         N00075 VCC  40.75k TC=0,0 
+R_Rsenzor         N00177 VCC  {r} TC=0,0 
+X_U1A         N00177 N00390 VCC -VCC N00390 TL082
+R_R5         N00390 N00477  1k TC=0,0 
+X_U1B         N00477 N00618 VCC -VCC N00681 TL082
+R_R6         0 N00477  1.875k TC=0,0 
+R_R7         N00618 N00681  1.875k TC=0,0 
+R_R8         REF1 N00618  1k TC=0,0 
+R_R9         N00681 N00786  1k TC=0,0 
+X_U2A         N00786 REF2 VCC -VCC N00906 TL082
+R_R10         N00786 N00906  1k TC=0,0 
+R_R11         N00906 N01788  1k TC=0,0 
+Q_Q3         N01792 N01788 0 Q2N2222
+R_R12         N02007 N00906  1k TC=0,0 
+R_RL         N01792 VCC  850 TC=0,0 
+V_V1         VCC 0 17V
+V_V2         -VCC 0 -17V
+X_U2B         N02701 REF1 VCC -VCC REF1 TL082
+X_U3A         N03121 REF2 VCC -VCC REF2 TL082
+R_R14         N02701 VCC  1k TC=0,0 
+R_R15         0 N02701  1k TC=0,0 
+R_R16         N03121 VCC  1k TC=0,0 
+R_R17         0 N03121  1k TC=0,0 
+D_Dportocala         N02007 0 Dportocala 
+.PARAM  r=15k
+
+**** RESUMING p1.cir ****
+.END
+
+ERROR(ORPSIM-15090): DC device V3 is undefined
+

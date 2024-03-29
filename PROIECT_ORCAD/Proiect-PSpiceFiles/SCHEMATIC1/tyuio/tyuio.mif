@@ -1,0 +1,4 @@
+ lib=C:\Miruna\PROIECT_ORCAD\dportocala.lib, offset=1038, size=62
+ lib=c:\cadence\spb_22.1\tools\PSpice\Library\bipolar.lib, offset=13005, size=562
+ lib=c:\cadence\spb_22.1\tools\PSpice\Library\opamp.lib, offset=54585, size=371
+ lib=c:\cadence\spb_22.1\tools\PSpice\Library\opamp.lib, offset=53165, size=1419

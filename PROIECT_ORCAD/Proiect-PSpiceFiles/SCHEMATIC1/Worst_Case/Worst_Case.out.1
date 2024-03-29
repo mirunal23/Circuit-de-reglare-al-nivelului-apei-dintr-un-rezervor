@@ -1,0 +1,604 @@
+
+**** 05/21/23 22:12:20 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Worst_Case"  [ C:\Miruna\PROIECT_ORCAD\proiect-pspicefiles\schematic1\worst_case.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Worst_Case.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../dportocala.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM r 35k 15k 100 
+.WCASE DC V([OUT]) YMAX VARY BOTH  HI 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECT
+Q_Q1         N00177 N00075 0 Q2N2222
+Q_Q2         N00075 N00075 0 Q2N2222
+R_R3         N00075 VCC R_R3 38.8k TC=0,0 
+.model        R_R3 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_Rsenzor         N00177 VCC  {r} TC=0,0 
+R_R5         N00390 N00477 R_R5 1k TC=0,0 
+.model        R_R5 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R6         0 N00477 R_R6 1.78k TC=0,0 
+.model        R_R6 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R7         N00618 N00681 R_R7 1.78k TC=0,0 
+.model        R_R7 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R8         REF1 N00618 R_R8 1k TC=0,0 
+.model        R_R8 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R9         REF2 N00786 R_R9 1k TC=0,0 
+.model        R_R9 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R10         N00786 OUT R_R10 2.84k TC=0,0 
+.model        R_R10 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R11         OUT N01788 R_R11 816 TC=0,0 
+.model        R_R11 RES R=1 DEV=0.5% TC1=0 TC2=0
+Q_Q3         N01792 N01788 0 Q2N2222
+R_R12         N02007 OUT R_R12 768 TC=0,0 
+.model        R_R12 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_RL         N01792 VCC R_RL 464 TC=0,0 
+.model        R_RL RES R=1 DEV=0.5% TC1=0 TC2=0
+V_V1         VCC 0 17V
+V_V2         -VCC 0 -17V
+R_R14         N02701 VCC R_R14 1k TC=0,0 
+.model        R_R14 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R15         0 N02701 R_R15 156 TC=0,0 
+.model        R_R15 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R16         N03121 VCC R_R16 665 TC=0,0 
+.model        R_R16 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R17         0 N03121 R_R17 1k TC=0,0 
+.model        R_R17 RES R=1 DEV=0.5% TC1=0 TC2=0
+D_Dportocala         N02007 0 Dportocala 
+X_U4A         N00786 N00681 VCC -VCC OUT LM358
+X_U4B         N00477 N00618 VCC -VCC N00681 LM358
+X_U5A         N00177 N00390 VCC -VCC N00390 LM358
+X_U5B         N03121 REF2 VCC -VCC REF2 LM358
+X_U6A         N02701 REF1 VCC -VCC REF1 LM358
+D_Dportocala1         N12559 0 Dportocala 
+V_V3         N12559 0 4V
+.PARAM  r=15k
+
+**** RESUMING Worst_Case.cir ****
+.END
+
+**** 05/21/23 22:12:20 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Worst_Case"  [ C:\Miruna\PROIECT_ORCAD\proiect-pspicefiles\schematic1\worst_case.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Dportocala      X_U4A.x_lm358.dx 
+          IS   10.013000E-21  800.000000E-18 
+           N    1.6367                       
+          RS    9.5575          1            
+
+
+               X_U4A.x_lm358.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+               X_U4B.x_lm358.dx 
+          IS  800.000000E-18 
+          RS    1            
+
+
+               X_U4B.x_lm358.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+               X_U5A.x_lm358.dx 
+          IS  800.000000E-18 
+          RS    1            
+
+
+               X_U5A.x_lm358.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+               X_U5B.x_lm358.dx 
+          IS  800.000000E-18 
+          RS    1            
+
+
+               X_U5B.x_lm358.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+               X_U6A.x_lm358.dx 
+          IS  800.000000E-18 
+          RS    1            
+
+
+               X_U6A.x_lm358.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+**** 05/21/23 22:12:20 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Worst_Case"  [ C:\Miruna\PROIECT_ORCAD\proiect-pspicefiles\schematic1\worst_case.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N2222         X_U4A.x_lm358.qx 
+               NPN             PNP             
+       LEVEL    1               1            
+          IS   14.340000E-15  800.000000E-18 
+          BF  255.9           166.7          
+          NF    1               1            
+         VAF   74.03                         
+         IKF     .2847                       
+         ISE   14.340000E-15                 
+          NE    1.307                        
+          BR    6.092           1            
+          NR    1               1            
+         ISS    0               0            
+          RB   10                            
+          RE    0               0            
+          RC    1               0            
+         CJE   22.010000E-12    0            
+         VJE     .75             .75         
+         MJE     .377                        
+         CJC    7.306000E-12    0            
+         VJC     .75             .75         
+         MJC     .3416           .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          TF  411.100000E-12                 
+         XTF    3                            
+         VTF    1.7                          
+         ITF     .6                          
+          TR   46.910000E-09                 
+         XTB    1.5                          
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.2          
+           D     .87             .52         
+
+
+               X_U4B.x_lm358.qx 
+               PNP             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF  166.7          
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.2          
+           D     .52         
+
+
+               X_U5A.x_lm358.qx 
+               PNP             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF  166.7          
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.2          
+           D     .52         
+
+
+               X_U5B.x_lm358.qx 
+               PNP             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF  166.7          
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.2          
+           D     .52         
+
+
+               X_U6A.x_lm358.qx 
+               PNP             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF  166.7          
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.2          
+           D     .52         
+
+
+**** 05/21/23 22:12:20 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Worst_Case"  [ C:\Miruna\PROIECT_ORCAD\proiect-pspicefiles\schematic1\worst_case.sim ] 
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_R3            R_R5            R_R6            R_R7            
+           R    1               1               1               1            
+
+
+               R_R8            R_R9            R_R10           R_R11           
+           R    1               1               1               1            
+
+
+               R_R12           R_RL            R_R14           R_R15           
+           R    1               1               1               1            
+
+
+               R_R16           R_R17           
+           R    1               1            
+
+
+**** 05/21/23 22:12:20 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Worst_Case"  [ C:\Miruna\PROIECT_ORCAD\proiect-pspicefiles\schematic1\worst_case.sim ] 
+
+
+ ****     Current Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U4A.x_lm358.sw2 
+         RON    1            
+        ROFF   10.000000E+06 
+         ION    0            
+        IOFF   -1.000000E-06 
+
+
+               X_U4A.x_lm358.sw1 
+         RON    1            
+        ROFF   10.000000E+06 
+         ION   -1.000000E-06 
+        IOFF    0            
+
+
+               X_U4A.x_lm358.sw3 
+         RON    1            
+        ROFF   10.000000E+06 
+         ION   -1.000000E-06 
+        IOFF    0            
+
+
+               X_U4A.x_lm358.sw4 
+         RON    1            
+        ROFF   10.000000E+06 
+         ION    0            
+        IOFF   -1.000000E-06 
+
+
+               X_U4B.x_lm358.sw2 
+         RON    1            
+        ROFF   10.000000E+06 
+         ION    0            
+        IOFF   -1.000000E-06 
+
+
+               X_U4B.x_lm358.sw1 
+         RON    1            
+        ROFF   10.000000E+06 
+         ION   -1.000000E-06 
+        IOFF    0            
+
+
+               X_U4B.x_lm358.sw3 
+         RON    1            
+        ROFF   10.000000E+06 
+         ION   -1.000000E-06 
+        IOFF    0            
+
+
+               X_U4B.x_lm358.sw4 
+         RON    1            
+        ROFF   10.000000E+06 
+         ION    0            
+        IOFF   -1.000000E-06 
+
+
+               X_U5A.x_lm358.sw2 
+         RON    1            
+        ROFF   10.000000E+06 
+         ION    0            
+        IOFF   -1.000000E-06 
+
+
+               X_U5A.x_lm358.sw1 
+         RON    1            
+        ROFF   10.000000E+06 
+         ION   -1.000000E-06 
+        IOFF    0            
+
+
+               X_U5A.x_lm358.sw3 
+         RON    1            
+        ROFF   10.000000E+06 
+         ION   -1.000000E-06 
+        IOFF    0            
+
+
+               X_U5A.x_lm358.sw4 
+         RON    1            
+        ROFF   10.000000E+06 
+         ION    0            
+        IOFF   -1.000000E-06 
+
+
+               X_U5B.x_lm358.sw2 
+         RON    1            
+        ROFF   10.000000E+06 
+         ION    0            
+        IOFF   -1.000000E-06 
+
+
+               X_U5B.x_lm358.sw1 
+         RON    1            
+        ROFF   10.000000E+06 
+         ION   -1.000000E-06 
+        IOFF    0            
+
+
+               X_U5B.x_lm358.sw3 
+         RON    1            
+        ROFF   10.000000E+06 
+         ION   -1.000000E-06 
+        IOFF    0            
+
+
+               X_U5B.x_lm358.sw4 
+         RON    1            
+        ROFF   10.000000E+06 
+         ION    0            
+        IOFF   -1.000000E-06 
+
+
+               X_U6A.x_lm358.sw2 
+         RON    1            
+        ROFF   10.000000E+06 
+         ION    0            
+        IOFF   -1.000000E-06 
+
+
+               X_U6A.x_lm358.sw1 
+         RON    1            
+        ROFF   10.000000E+06 
+         ION   -1.000000E-06 
+        IOFF    0            
+
+
+               X_U6A.x_lm358.sw3 
+         RON    1            
+        ROFF   10.000000E+06 
+         ION   -1.000000E-06 
+        IOFF    0            
+
+
+               X_U6A.x_lm358.sw4 
+         RON    1            
+        ROFF   10.000000E+06 
+         ION    0            
+        IOFF   -1.000000E-06 
+
+
+
+Mean Deviation =   -2.3731
+Sigma          =    8.5563
+
+ RUN                    MAX DEVIATION FROM NOMINAL
+
+R_R3 R_R3 R             33.223  (3.88 sigma)  lower  at r =   17.5000E+03
+                        (  -2.0465E+03% change per 1% change in Model Parameter)
+
+R_R7 R_R7 R          383.3800E-06  ( .00 sigma)  lower  at r =   17.5000E+03
+                        (   -.0236% change per 1% change in Model Parameter)
+
+R_R6 R_R6 R          343.3200E-06  ( .00 sigma)  lower  at r =   17.5000E+03
+                        (   -.0211% change per 1% change in Model Parameter)
+
+R_R11 R_R11 R        272.7500E-06  ( .00 sigma)  higher  at r =   17.5000E+03
+                        (    .0168% change per 1% change in Model Parameter)
+
+R_R12 R_R12 R        270.8400E-06  ( .00 sigma)  higher  at r =   17.5000E+03
+                        (    .0167% change per 1% change in Model Parameter)
+
+R_R8 R_R8 R          181.2000E-06  ( .00 sigma)  higher  at r =   17.5000E+03
+                        (    .0112% change per 1% change in Model Parameter)
+
+R_R5 R_R5 R          173.5700E-06  ( .00 sigma)  higher  at r =   17.5000E+03
+                        (    .0107% change per 1% change in Model Parameter)
+
+R_R14 R_R14 R        173.5700E-06  ( .00 sigma)  lower  at r =   17.5000E+03
+                        (   -.0107% change per 1% change in Model Parameter)
+
+R_R16 R_R16 R        158.3100E-06  ( .00 sigma)  lower  at r =   17.5000E+03
+                        (  -9.7517E-03% change per 1% change in Model Parameter)
+
+R_R15 R_R15 R        118.2600E-06  ( .00 sigma)  higher  at r =   17.5000E+03
+                        (   7.2844E-03% change per 1% change in Model Parameter)
+
+R_R17 R_R17 R        118.2600E-06  ( .00 sigma)  higher  at r =   17.5000E+03
+                        (   7.2844E-03% change per 1% change in Model Parameter)
+
+R_R9 R_R9 R           49.5910E-06  ( .00 sigma)  higher  at r =   17.5000E+03
+                        (   3.0548E-03% change per 1% change in Model Parameter)
+
+R_R10 R_R10 R         30.5180E-06  ( .00 sigma)  lower  at r =   17.5000E+03
+                        (  -1.8799E-03% change per 1% change in Model Parameter)
+
+R_RL R_RL R            1.9073E-06  ( .00 sigma)  lower  at r =   31.8000E+03
+                        (-117.4900E-06% change per 1% change in Model Parameter)
+
+
+**** 05/21/23 22:12:20 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Worst_Case"  [ C:\Miruna\PROIECT_ORCAD\proiect-pspicefiles\schematic1\worst_case.sim ] 
+
+
+ ****     UPDATED MODEL PARAMETERS         TEMPERATURE =   27.000 DEG C
+
+                      WORST CASE ALL DEVICES
+
+******************************************************************************
+
+
+
+Device       MODEL        PARAMETER    NEW VALUE    
+R_R3         R_R3         R                .995         (Decreased)  
+R_R5         R_R5         R               1.005         (Increased)  
+R_R6         R_R6         R                .995         (Decreased)  
+R_R7         R_R7         R                .995         (Decreased)  
+R_R8         R_R8         R               1.005         (Increased)  
+R_R9         R_R9         R               1.005         (Increased)  
+R_R10        R_R10        R                .995         (Decreased)  
+R_R11        R_R11        R               1.005         (Increased)  
+R_R12        R_R12        R               1.005         (Increased)  
+R_RL         R_RL         R                .995         (Decreased)  
+R_R14        R_R14        R                .995         (Decreased)  
+R_R15        R_R15        R               1.005         (Increased)  
+R_R16        R_R16        R                .995         (Decreased)  
+R_R17        R_R17        R               1.005         (Increased)  
+    
+
+**** 05/21/23 22:12:20 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Worst_Case"  [ C:\Miruna\PROIECT_ORCAD\proiect-pspicefiles\schematic1\worst_case.sim ] 
+
+
+ ****     SORTED DEVIATIONS OF V(OUT)      TEMPERATURE =   27.000 DEG C
+
+                      WORST CASE SUMMARY
+
+******************************************************************************
+
+
+
+
+
+Mean Deviation =   33.227
+Sigma          =    0     
+
+ RUN                    MAX DEVIATION FROM NOMINAL
+
+WORST CASE ALL DEVICES
+                        33.227  higher  at r =   17.4000E+03
+                        ( -95.574% of Nominal)
+
+
+
+          JOB CONCLUDED
+
+**** 05/21/23 22:12:20 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Worst_Case"  [ C:\Miruna\PROIECT_ORCAD\proiect-pspicefiles\schematic1\worst_case.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        2.84
+

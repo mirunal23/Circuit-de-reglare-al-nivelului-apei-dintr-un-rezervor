@@ -1,0 +1,8 @@
+STATUS: PSpice Schematics to Capture translator (22.1.0.d001)
+STATUS:  
+STATUS: Translator started at Wednesday, May 17, 2023 14:47:30
+STATUS: C:\Cadence\SPB_22.1\tools\bin\sch2cap -f "C:\Miruna\PROIECT_ORCAD\Dportocala.lib" -o "C:\Miruna\PROIECT_ORCAD\Dportocala.olb" -i C:\SPB_Data\.\cdssetup\OrCAD_PSpice/22.1.0/PSpice.ini -s Dportocala
+INFO(ORSCH-1029): Using existing library 'C:\Cadence\SPB_22.1\tools\Capture\Library\PSpice\modeled.etc'.
+INFO(ORSCH-1031): Created new library 'C:\Miruna\PROIECT_ORCAD\Dportocala.olb'.
+STATUS: Translator stopped at Wednesday, May 17, 2023 14:47:30
+STATUS: 0 Error messages, 0 Warning messages
